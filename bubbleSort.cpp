@@ -18,23 +18,29 @@ int main()
     cin >> size;
     
     int arr[size];
+   // bool swap;
     
     for(int i=0; i < size; i++)
     {
         cin >> arr[i];
     }
     
-    for(int i = 0; i < size - 1; i++)
+    for(int i = 0; i < size - 1; i++)               
     {
+       // swap = false;
         for(int j = 0; j < size - 1 - i; j++)
         {
             if(arr[j] > arr[j + 1])
             {
                 int temp = arr[j];
-                arr[j] = arr[j + 1];
+                arr[j] = arr[j + 1];    // swapping
                 arr[j + 1] = temp;
+            //  swap = true;
             }
         }
+        
+       // if(swap == false)
+       //   break;
         
     }
     
@@ -45,3 +51,8 @@ int main()
     
    return 0;
 }
+
+// This algorithm can be optimized by stopping the algorithm if inner loop didn’t cause any swap 
+// as shown in commented part of code above 
+
+
